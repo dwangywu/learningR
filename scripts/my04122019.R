@@ -83,3 +83,46 @@ na.omit(cats)
 cats<-na.omit(cats)
 #remove rows
 cats<-cats[4,]
+#explore gapminder data set
+#read in gapminder
+gapminder<-read.csv("data/gapminder_data.csv")
+gapminder
+#visually inspect our imported data set
+#click on gapminder
+View(gapminder)
+#structure of gapminder
+str(gapminder)
+#summary
+#Factor columns are summarized by the number of items in each level
+#numeric and integer columns are summarized by the descriptive statistics
+#character columns are summarized by its length,class, and mode
+summary(gapminder)
+min(gapminder$year)
+summary(gapminder$country)
+#object type
+#what is the object type in the year column?
+typeof(gapminder$year)
+#what is the object type in the country column?
+typeof(gapminder$country)
+#length(number of columns)
+length(gapminder)
+#type of entire gapminder data set
+size(gapminder)
+dim(gapminder)
+list(gapminder)
+#number of rows
+nrow(gapminder)
+#number of rows
+ncol(gapminder)
+#previewing our data set
+#HEAD(remember from bash??)
+#preview first few lines
+head(gapminder,n=15)
+#preview last few lines
+tail(gapminder,n=10)
+#how would you preview some lines in the middle?
+gapminder[850:860,]
+#below give me median of population, not middle few line
+median(gapminder$pop)
+#Challenge #2
+#save R script
